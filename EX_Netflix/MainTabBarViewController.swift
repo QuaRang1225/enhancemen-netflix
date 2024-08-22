@@ -27,9 +27,13 @@ class MainTabBarViewController: UITabBarController {
         vc3.title = "검색"
         vc4.title = "다운로드"
         
+        tabBar.tintColor = .label //primary
         setViewControllers([vc1,vc2,vc3,vc4], animated: true)
     }
     
+}
+#Preview{
+    MainTabBarViewController()
 }
 
 
