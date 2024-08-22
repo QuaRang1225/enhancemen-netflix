@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-//    var window1: UIWindow?
+    var window1: UIWindow?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -23,10 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.rootViewController = ViewController()
         self.window?.makeKeyAndVisible()    //화면 세팅
         
-//        self.window1 = UIWindow(windowScene: window)
-//        self.window1?.windowScene = window
-//        self.window1?.rootViewController = ViewController1()
-//        self.window1?.makeKeyAndVisible() //화면 세팅
+        self.window1 = UIWindow(windowScene: window)
+        self.window1?.windowScene = window
+        self.window1?.rootViewController = ViewController1()
+        self.window1?.makeKeyAndVisible() //화면 세팅
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
