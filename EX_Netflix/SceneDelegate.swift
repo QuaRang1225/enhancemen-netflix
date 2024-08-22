@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let window = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: window)
         self.window?.windowScene = window
-        self.window?.rootViewController = ViewController()
+        self.window?.rootViewController = MainTabBarViewController()
         self.window?.makeKeyAndVisible()    //화면 세팅
     }
 
