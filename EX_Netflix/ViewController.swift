@@ -11,11 +11,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let view1 = UIView(frame: CGRect(x: 30, y: 30, width: 100, height: 100))
-        view1.backgroundColor = .red
-        self.view.addSubview(view1)
-        print("뷰 업로드됨")
-        // Do any additional setup after loading the view.
     }
     
 }
