@@ -22,7 +22,6 @@
 		D6F0D2462C76D33400F4F72A /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0D2452C76D33400F4F72A /* DownloadsViewController.swift */; };
 		D6F0D24D2C76F28300F4F72A /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0D24C2C76F28300F4F72A /* CollectionViewTableViewCell.swift */; };
 		D6F0D24F2C77063B00F4F72A /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0D24E2C77063B00F4F72A /* HeroHeaderUIView.swift */; };
-		D6F0D2512C77240800F4F72A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0D2502C77240800F4F72A /* TestViewController.swift */; };
 		D6F0D2542C78084C00F4F72A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0D2532C78084C00F4F72A /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +62,6 @@
 		D6F0D2452C76D33400F4F72A /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		D6F0D24C2C76F28300F4F72A /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		D6F0D24E2C77063B00F4F72A /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
-		D6F0D2502C77240800F4F72A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		D6F0D2532C78084C00F4F72A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,7 +155,6 @@
 				D6F0D2412C76D30500F4F72A /* UpcomingViewController.swift */,
 				D6F0D2432C76D31D00F4F72A /* SearchViewController.swift */,
 				D6F0D2452C76D33400F4F72A /* DownloadsViewController.swift */,
-				D6F0D2502C77240800F4F72A /* TestViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -338,7 +335,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6F0D2512C77240800F4F72A /* TestViewController.swift in Sources */,
 				D6F0D2542C78084C00F4F72A /* UIImage.swift in Sources */,
 				D6F0D2442C76D31D00F4F72A /* SearchViewController.swift in Sources */,
 				D6F0D2112C75D00200F4F72A /* MainTabBarViewController.swift in Sources */,

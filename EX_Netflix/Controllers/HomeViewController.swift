@@ -9,7 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController{
     
-    var tabBarHieght:CGFloat = .zero
     
     private var homeFeedTable:UITableView = {
         let table = UITableView(frame: .zero,style: .grouped)
