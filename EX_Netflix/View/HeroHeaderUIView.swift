@@ -12,6 +12,7 @@ class HeroHeaderUIView: UIView {
     private let playButton:UIButton = {
         let button = UIButton()
         button.setTitle("재생", for: .normal)
+        button.setTitleColor(.label, for: .normal)
         button.layer.cornerRadius = 5
         button.layer.borderColor = UIColor.label.cgColor
         button.layer.borderWidth = 1

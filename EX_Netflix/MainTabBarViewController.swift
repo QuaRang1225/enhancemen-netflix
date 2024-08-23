@@ -17,7 +17,7 @@ class MainTabBarViewController: UITabBarController {
         home.tabBarHieght = tabBar.frame.height
         
         let vc1 = UINavigationController(rootViewController: home)
-        let vc2 = UINavigationController(rootViewController: UpcomingViewController())
+        let vc2 = UINavigationController(rootViewController: TestViewController())
         let vc3 = UINavigationController(rootViewController: SearchViewController())
         let vc4 = UINavigationController(rootViewController: DownloadsViewController())
         
@@ -46,27 +46,27 @@ class MainTabBarViewController: UITabBarController {
 
 
 // - 생명주기 관련
-extension MainTabBarViewController{
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("뷰 나타날 예정")
-    }
-    override func viewIsAppearing(_ animated: Bool) {
-        print("뷰 나타나는 중")
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        print("뷰 닫힘")
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        print("뷰 닫힐 예정")
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        print("뷰 나타남")
-    }
-    override func viewWillLayoutSubviews() {
-        print("레이아웃 구성 예정")
-    }
-    override func viewDidLayoutSubviews() {
-        print("레이아웃 구성 완료")
-    }
-}
+//extension MainTabBarViewController{
+//    
+//    override func viewWillAppear(_ animated: Bool) {
+//        print("뷰 나타날 예정")
+//    }
+//    override func viewIsAppearing(_ animated: Bool) {
+//        print("뷰 나타나는 중")
+//    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        print("뷰 닫힘")
+//    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        print("뷰 닫힐 예정")
+//    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        print("뷰 나타남")
+//    }
+//    override func viewWillLayoutSubviews() {
+//        print("레이아웃 구성 예정")
+//    }
+//    override func viewDidLayoutSubviews() {
+//        print("레이아웃 구성 완료")
+//    }
+//}

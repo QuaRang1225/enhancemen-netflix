@@ -28,13 +28,29 @@ class HomeViewController: UIViewController{
         homeFeedTable.dataSource = self
         
         
-        let headerView = HeroHeaderUIView(frame: CGRect(origin: .zero, size: CGSize(width: view.bounds.width, height: 450)))
+        let headerView = HeroHeaderUIView(frame: CGRect(origin: .zero, size: CGSize(width: view.bounds.width, height: 500)))
         homeFeedTable.tableHeaderView = headerView
     }
     
+    private func configurationNavigationBar(){
+        var image = UIImage(named:"netflix")
+        image = image?.resize(size: CGSize(width: 30, height: 30))
+        image = image?.withRenderingMode(.alwaysOriginal)
+        
+        navigationController?.navigationBar.tintColor = .label
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
+        ]
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configurationNavigationBar()
+    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        view.bounds.size.height -= (tabBarHieght*2)
+//        view.bounds.size.height -= (tabBarHieght*2)
         homeFeedTable.frame = view.bounds
         
     }
@@ -62,8 +78,14 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
         //아이템 높이
         return 200
     }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defaultOffset = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffset
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0,-offset))
+    }
 }
 
 #Preview{
     HomeViewController()
 }
+
