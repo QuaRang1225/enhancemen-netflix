@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController{
     
-    
+    let sectionTitle:[String] = ["추천 영화","인기 작품","추천 시리즈","예정 작품","인기 순위"]
     private var homeFeedTable:UITableView = {
         let table = UITableView(frame: .zero,style: .grouped)
         table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: "collectionViewTableViewCell")
@@ -59,7 +59,7 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         //섹션 개수
-        return 20
+        return sectionTitle.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //섹션 테이블 개수
@@ -81,6 +81,15 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
         let defaultOffset = view.safeAreaInsets.top
         let offset = scrollView.contentOffset.y + defaultOffset
         navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0,-offset))
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitle[section]
+    }
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else {return}
+        header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+        header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
+        header.textLabel?.textColor = .label
     }
 }
 
