@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController{
     
     let sectionTitle:[String] = ["추천 영화","인기 작품","추천 시리즈","예정 작품","인기 순위"]
+    var images:[UIImage] = []
+    
     private var homeFeedTable:UITableView = {
         let table = UITableView(frame: .zero,style: .grouped)
         table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: "collectionViewTableViewCell")
@@ -29,6 +31,8 @@ class HomeViewController: UIViewController{
         
         let headerView = HeroHeaderUIView(frame: CGRect(origin: .zero, size: CGSize(width: view.bounds.width, height: 500)))
         homeFeedTable.tableHeaderView = headerView
+        
+        getWork()
     }
     
     private func configurationNavigationBar(){
@@ -52,6 +56,19 @@ class HomeViewController: UIViewController{
 //        view.bounds.size.height -= (tabBarHieght*2)
         homeFeedTable.frame = view.bounds
         
+    }
+    private func getWork(){
+        APICaller.shaerd.getTrend { result in
+            switch result{
+            case .success(let work):
+                let posters =  work.data?.popularRecommendationMovie?.results.compactMap{ URL(string: "https://image.tmdb.org/t/p/original\($0.posterPath ?? "")") }
+                guard let posters else {return}
+//                self.images = posters.map{$0.load}
+                print(self.images)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
  

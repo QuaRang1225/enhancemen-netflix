@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  EX_Netflix
+//
+//  Created by 유영웅 on 8/26/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+BASE_URL = api.iimad.com

@@ -23,6 +23,7 @@
 		D6F0D24D2C76F28300F4F72A /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0D24C2C76F28300F4F72A /* CollectionViewTableViewCell.swift */; };
 		D6F0D24F2C77063B00F4F72A /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0D24E2C77063B00F4F72A /* HeroHeaderUIView.swift */; };
 		D6F0D2542C78084C00F4F72A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0D2532C78084C00F4F72A /* UIImage.swift */; };
+		D6F0D2562C7C3F9400F4F72A /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0D2552C7C3F9400F4F72A /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		D6F0D24C2C76F28300F4F72A /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		D6F0D24E2C77063B00F4F72A /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		D6F0D2532C78084C00F4F72A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		D6F0D2552C7C3F9400F4F72A /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		D6F0D2572C7C3FE400F4F72A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 				D6F0D2152C75D00400F4F72A /* Assets.xcassets */,
 				D6F0D2172C75D00400F4F72A /* LaunchScreen.storyboard */,
 				D6F0D21A2C75D00400F4F72A /* Info.plist */,
+				D6F0D2572C7C3FE400F4F72A /* Config.xcconfig */,
 			);
 			path = EX_Netflix;
 			sourceTree = "<group>";
@@ -192,6 +196,7 @@
 		D6F0D24B2C76F24300F4F72A /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				D6F0D2552C7C3F9400F4F72A /* APICaller.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				D6F0D2462C76D33400F4F72A /* DownloadsViewController.swift in Sources */,
 				D6F0D20D2C75D00200F4F72A /* AppDelegate.swift in Sources */,
 				D6F0D20F2C75D00200F4F72A /* SceneDelegate.swift in Sources */,
+				D6F0D2562C7C3F9400F4F72A /* APICaller.swift in Sources */,
 				D6F0D2422C76D30500F4F72A /* UpcomingViewController.swift in Sources */,
 				D6F0D2402C76D2E300F4F72A /* HomeViewController.swift in Sources */,
 			);
@@ -405,6 +411,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BASE_URL = api.iimad.com;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -468,6 +475,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BASE_URL = api.iimad.com;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
